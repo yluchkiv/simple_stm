@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 int main();
 
 void reset(void)
@@ -8,3 +10,8 @@ void reset(void)
 
     }
 }
+ __attribute__((section(".vector"))) const uint32_t vercotr_table[128] = {
+    0x20010000,
+    (uint32_t)&reset
+
+ };
