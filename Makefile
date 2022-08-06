@@ -1,4 +1,4 @@
-CFLAGS=-std=c99 -Wall -g -O0 -Og -I. -mfloat-abi=soft -mtune=cortex-m4 -mcpu=cortex-m4 -mthumb
+CFLAGS=-std=c99 -Wall -g3 -O0 -Og -I. -mfloat-abi=soft -mtune=cortex-m4 -mcpu=cortex-m4 -mthumb -gdwarf-2 
 
 all: f.elf
 

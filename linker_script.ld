@@ -18,4 +18,26 @@ SECTIONS
         *(.text*)
     } > FLASH
 
+    .data :
+    {
+        *(.data*)
+    } > RAM AT > FLASH
+
+    _data_flash = LOADADDR(.data);
+    _data_ram = ADDR(.data);
+    _data_size = SIZEOF(.data);
+
+    .bss :
+    {
+        *(.bss*)
+    } > RAM
+
+    _bss_ram =  ADDR(.bss);
+    _bss_size = SIZEOF(.bss);
+
+    .rodata :
+    {
+        *(.rodata*)
+    } > FLASH
+
 }
