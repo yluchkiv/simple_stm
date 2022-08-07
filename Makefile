@@ -1,4 +1,4 @@
-CC_FLAGS=-std=c99 -Wall -O2 -iquote ./ -mfloat-abi=soft -mcpu=cortex-m4 -mthumb
+CC_FLAGS=-std=c99 -Wall -O0 -Og -g3 -iquote ./ -I ./ -mfloat-abi=soft -mcpu=cortex-m4 -mthumb -gdwarf-2
 
 all: f.elf
 
