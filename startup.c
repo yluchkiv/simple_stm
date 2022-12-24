@@ -2,7 +2,7 @@
 
 int main();
 
-extern uint32_t _data_flash;
+extern uint32_t _data_flash;   
 extern uint32_t _data_ram;
 extern uint32_t _data_size;
 
@@ -55,7 +55,7 @@ void reset(void)
  }
  
  extern uint32_t _initial_sp;
-__attribute__((section(".vector_table"))) const uint32_t vercotr_table[128] =
+__attribute__((section(".vector_table"))) const uint32_t vector_table[128] =
 {
    (uint32_t)&_initial_sp,
    (uint32_t)&reset,

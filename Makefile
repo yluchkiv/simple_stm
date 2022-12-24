@@ -1,4 +1,5 @@
-CC_FLAGS=-std=c99 -Wall -O0 -Og -g3 -iquote ./ -I ./ -mfloat-abi=soft -mcpu=cortex-m4 -mthumb -gdwarf-2
+CC_FLAGS=-std=c99 -Wall -O0 -Og -g3 -iquote ./ -I ./ -I ./STM32CubeF3/Drivers/CMSIS/Device/ST/STM32F3xx/Include/\
+ -I ./STM32CubeF3/Drivers/CMSIS/Core/Include/ -mfloat-abi=soft -mcpu=cortex-m4 -mthumb -gdwarf-2 -D=STM32F303xE
 
 all: f.elf
 
